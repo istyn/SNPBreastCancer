@@ -1,0 +1,107 @@
+<!--
+	DNA contains named genes on a particular chromosome. Within a gene exists positions of interest when
+	calculating the cumulative risk of developing breast cancer. These positions are named by rsid. and
+	may have an a.m attribute, which magnifies the risk of that genotype. An undeclared magnitude
+	implies a risk of 1d per allele, max of 2d.
+	g.s attribute specifies the significance of the position in the statistical calculations.
+		0 = used to calculate first method only,
+		1 = used in first method, and display,
+		2 = used in first and second calculation.
+	To parse properly in a O(5n) search, DNA must be presorted in asc order by "chromosome" and "position".
+	A ';' delimited allele implies a particular genotype, therefore must have an associated m.
+	An error will be thrown if DNA is not ordered ASCENDING by chromosome then position.
+
+-->
+<DNA>
+ 	<ATM chromosome="11">
+		<g rsid="rs3218707" orientation="+" s="2">
+			<a>C</a>
+		</g>
+		<g rsid="rs4987945" orientation="+" s="2">
+			<a>G</a>
+		</g>
+		<g rsid="rs4986761" orientation="+" s="2">
+			<a m="1">C;T</a>
+			<a m="1.5">C;C</a>
+		</g>
+		<g rsid="rs3218695" orientation="+" s="2">
+			<a>A</a>
+		</g>
+		<g rsid="rs1800056" orientation="+" s="2">
+			<a m="1.05">C;T</a>
+			<a m="1.5">C;C</a>
+		</g>
+		<g rsid="rs1800057" orientation="+" s="2">
+			<a m="1.05">C;G</a>
+			<a m="1.5">G;G</a>
+		</g>
+		<g rsid="rs3092856" orientation="+" s="2">
+			<a>T</a>
+		</g>
+		<g rsid="rs1800058" orientation="+" s="2">
+			<a m="1.05">C;T</a>
+			<a m="1.5">T;T</a>
+		</g>
+		<g rsid="rs1801673" orientation="+" s="2">
+			<a>T</a>
+		</g>
+	</ATM>
+	<BRCA2 chromosome="13">
+		<g rsid="rs766173" orientation="+" s="2">
+			<a m="2">G;G</a>
+		</g>
+		<g rsid="rs144848" orientation="-" s="1">
+			<a m="1.5">G;T</a>
+			<a m="2">G;G</a>
+		</g>
+		<g rsid="rs4987117" orientation="+" s="2">
+			<a m="2">T;T</a>
+		</g>
+		<g rsid="rs1799954" orientation="+" s="2">
+			<a m="2">T;T</a>
+		</g>
+		<g rsid="rs11571746" orientation="+" s="2">
+			<a m="2">C;C</a>
+		</g>
+		<g rsid="rs11571747" orientation="+" s="2">
+			<a m="2">C;C</a>
+		</g>
+		<g rsid="rs4987047" orientation="+" s="2">
+			<a m="2">T;T</a>
+		</g>
+		<g rsid="rs11571833" orientation="+" s="2">
+			<a m="2">T;T</a>
+		</g>
+		<g rsid="rs1801426" orientation="+" s="2">
+			<a m="2">G;G</a>
+		</g>
+	</BRCA2>
+	<TP53 chromosome="17">
+		<g rsid="rs1042522" orientation="-" s="0">
+			<a m="3">G;G</a>
+		</g>
+	</TP53>
+	<BRCA1 chromosome="17">
+		<g rsid="rs1799966" orientation="-" s="1">
+			<a m="2">G;G</a>
+		</g>
+		<g rsid="rs16942" orientation="-" s="1">
+			<a m="2">G;G</a>
+		</g>
+		<g rsid="rs2227945" orientation="+" s="2">
+			<a m="2">G;G</a>
+		</g>
+		<g rsid="rs4986850" orientation="+" s="2">
+			<a m="2">A;A</a>
+		</g>
+		<g rsid="rs1799950" orientation="+" s="2">
+			<a m="1">A;G</a>
+			<a m="2">G;G</a>
+		</g>
+	</BRCA1>
+	<CHEK2 chromosome="22">
+		<g rsid="rs17879961" orientation="+" s="2">
+			<a>C</a>
+		</g>
+	</CHEK2>
+</DNA>
